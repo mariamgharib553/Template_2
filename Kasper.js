@@ -30,11 +30,11 @@ activateElement(document.querySelectorAll("nav li a") , 0);
 //for switching between active and inactive pages.
 let landingPage = document.querySelector("#Home");
 let bullets = document.querySelectorAll(".bullets li");
-let Images = ["Images/landing.jpg",
-            "Images/shuffle-02.jpg",
-            "Images/shuffle-03.jpg",
-            "Images/shuffle-04.jpg",
-            "Images/shuffle-08.jpg"];
+let Images = ["/Images/landing.jpg",
+            "/Images/shuffle-02.jpg",
+            "/Images/shuffle-03.jpg",
+            "/Images/shuffle-04.jpg",
+            "/Images/shuffle-08.jpg"];
 
 let index = 0;
 function switchingUpPage() {
