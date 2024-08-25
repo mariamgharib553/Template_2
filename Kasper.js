@@ -17,9 +17,9 @@ togglingFun();
 // for clicking at any link.
 function activateElement(list , activeClass_num) {
     var ul_target = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < list.length; i++) {
         ul_target.push(list[i]);
-        ul_target[i].onclick = () => {
+        ul_target[i].onclick = function() {
             document.getElementsByClassName("active")[activeClass_num].classList.remove("active")
             ul_target[i].classList.add("active")
         }
