@@ -287,17 +287,32 @@ header nav .form i {
     line-height: 2;
 }
 
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(450px,1fr));
-    /* gap: 3vw; */
-    margin: auto auto 5vh auto;
+/* goa media query 34an as8r mn keda msh m7tagen grid asln */
+@media (min-width: 768px) {
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(450px,1fr));
+        margin: auto auto 5vh auto;
+    }
 }
 
 .services-container .part {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .services-container .part {
+        flex-direction: column;
+        padding: 2vb;
+        margin-bottom: 4vh;
+        text-align: center;
+    }   
+    
+    .services-container i {
+        margin-bottom: 4vh;
+    }
 }
 
 .services-container i {
