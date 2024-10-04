@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Memory Cards</h1>
+
+  <div class="grid-container">
+    <!-- Cards will be generated here -->
+  </div>
+
+  <p>Score: <span class="score"></span></p>
+
+  <div class="actions">
+    <button onclick="restart()">Restart</button>
+  </div>
+
+  <!-- Notification Div -->
+  <div class="notification hidden">
+    <div class="notification-card">
+      <div class="front"></div>
+      <div class="back">
+        <p class="card-info"></p>
+        <button class="continue-button">Continue</button>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

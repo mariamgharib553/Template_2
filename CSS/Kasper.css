@@ -4,11 +4,11 @@
 }
 
 :root {
-    --main-color: rgb(25, 200, 250);
-    --transparent-color: rgb(15 116 143 / 70%);
+    --main-color: rgb(142, 34, 197);
+    --transparent-color: rgba(78, 21, 107, 0.685);
     --padding-top: 100px;
     --padding-bottom: 100px;
-}  
+}
 
 html {
     scroll-behavior: smooth;
@@ -17,13 +17,14 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
+    /* overflow: hidden; */
 }
 
 @media (min-width:767px) {
     nav .logo {
         display: none;
     }
-}    
+}
 
 header {
     position: absolute;
@@ -35,7 +36,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
+}
 
 .container {
     margin: 0px 15px;
@@ -50,7 +51,7 @@ header .container::after {
     height: 1px;
     background-color: #a2a2a2;
     position: absolute;
-    bottom: 0px;  
+    bottom: 0px;
 }
 
 header nav {
@@ -63,7 +64,7 @@ header nav {
 header nav ul {
     display: flex;
     list-style: none;
-} 
+}
 
 header nav ul li a {
     display: block;
@@ -78,7 +79,9 @@ header nav ul li a {
 header nav ul li a.active,
 header nav ul li a:hover {
     color: var(--main-color);
-    border-bottom: 1px var(--main-color) solid ;
+    font-weight: bolder;
+    font-size: 16px;
+    border-bottom: 1px var(--main-color) solid;
     transition: .3s;
 }
 
@@ -111,7 +114,7 @@ header nav ul li a:hover {
         top: 13vh;
         left: -2vw;
     }
-    
+
     header nav ul.on li {
         /* text-align: center; */
         width: 90%;
@@ -132,7 +135,7 @@ header nav .form {
 
 header nav .form i {
     position: relative;
-    top:  25%;
+    top: 25%;
 }
 
 /* Large screens */
@@ -148,7 +151,7 @@ header nav .form i {
 }
 
 #Home {
-    background-image: url("../Images/landing.jpg");
+    background-image: url("../Images/bg/wallpapersden.com_astronaut-fantasy-dream-4k.jpg");
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -165,10 +168,13 @@ header nav .form i {
 
 #Home .text {
     display: flex;
-    color: #fff;
-    background-color: var(--transparent-color);
+    color: #ffffff;
+    background-color: rgba(78, 21, 107, 0.363);
+    /* background-color: var(--transparent-color); */
     line-height: 1.5;
     width: 40%;
+    /* border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%; */
     padding: 7vb;
     position: absolute;
     top: 50%;
@@ -189,9 +195,14 @@ header nav .form i {
     }
 }
 
-.fa-angle-left , .fa-angle-right {
+.fa-angle-left,
+.fa-angle-right {
     color: #a2a2a2;
-    font-size: 25px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    /* padding: 2vb; */
+    padding: 2vb 2.5vb;
+    font-size: 23px;
     font-weight: 500;
     cursor: pointer;
     position: absolute;
@@ -203,6 +214,7 @@ header nav .form i {
 .fa-angle-left:hover,
 .fa-angle-right:hover {
     transition: .3s;
+    background-color: rgb(93, 23, 129);
     color: #fff;
 }
 
@@ -249,7 +261,15 @@ header nav .form i {
     text-align: center;
 }
 
+.main-heading p {
+    color: #777;
+    max-width: 550px;
+    margin: auto auto 12vh auto;
+    line-height: 2;
+}
+
 .main-heading h2 {
+    position: relative;
     font-weight: normal;
     text-transform: uppercase;
     font-size: 40px;
@@ -257,11 +277,11 @@ header nav .form i {
 }
 
 .main-heading h2::before {
+    position: absolute;
     content: "";
     width: 120px;
     height: 1.5px;
     background-color: #333;
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 80px;
@@ -280,120 +300,12 @@ header nav .form i {
     top: 72px;
 }
 
-.main-heading p {
-    color: #777;
-    max-width: 550px;
-    margin: auto auto 12vh auto;
-    line-height: 2;
-}
 
-/* goa media query 34an as8r mn keda msh m7tagen grid asln */
-@media (min-width: 768px) {
-    .services-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill , minmax(450px,1fr));
-        margin: auto auto 5vh auto;
-    }
-}
-
-.services-container .part {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-}
-
-@media (max-width: 768px) {
-    .services-container .part {
-        flex-direction: column;
-        padding: 2vb;
-        margin-bottom: 4vh;
-        text-align: center;
-    }   
-    
-    .services-container i {
-        margin-bottom: 4vh;
-    }
-}
-
-.services-container i {
-    font-size: 50px;
-    padding-right: 5vb;
-}
-
-.services-container .part-paragraph h3 {
-    font-size: 22px;
-    color: var(--main-color);
-    padding-bottom: 3vb;
-}
-
-.services-container .part-paragraph p {
-    font-size: 16px;
-    color: #777;
-    line-height: 2;
-}
-
-#Design {
-    background-image: url("../Images/design-features.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+#Team-Challenges {
     padding: var(--padding-top) 0;
-    height: 45vh;
-    position: relative;
-    overflow: hidden;
 }
 
-#Design .img , #Design .text {
-    flex: 1;
-    z-index: 2;
-}
-
-#Design .img {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -120px;
-} 
-
-#Design:before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-#Design .text {
-    width: 50vw;
-    padding: 5vb;
-    background-color: var(--transparent-color);
-    color: #fff;
-    line-height: 1.5;
-    transform: translateY(-20%);
-}
-
-#Design .text h2 {
-    text-transform: uppercase;
-    font-weight: normal;
-    margin-bottom: 5vh;
-}
-
-#Design .text ul li{ 
-    list-style: none;
-    line-height: 3;
-}
-
-#Design .text ul li span {
-    margin-left: 2vw;
-}
-
-#Portfolio {
-    padding: var(--padding-top) 0 ;
-}
-
-#Portfolio .container {
+#Team-Challenges .container {
     display: flex;
     flex-direction: column;
 }
@@ -417,67 +329,68 @@ header nav .form i {
     color: #fff;
 }
 
-#Portfolio .imgs {
+#Team-Challenges .imgs {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 6vh;
+    object-fit: cover;
 }
 
-#Portfolio .imgs .img-container {
+#Team-Challenges .imgs .img-container {
     flex-basis: 25%;
     position: relative;
     overflow: hidden;
 }
 
-#Portfolio .imgs .hidden {
+#Team-Challenges .imgs .hidden {
     display: none;
 }
 
 @media (max-width: 1199px) {
-    #Portfolio .imgs .img-container {
+    #Team-Challenges .imgs .img-container {
         flex-basis: 50%;
     }
 }
 
 @media (max-width: 768px) {
-    #Portfolio .imgs .img-container {
+    #Team-Challenges .imgs .img-container {
         flex-basis: 100%;
     }
 }
 
-#Portfolio .imgs .img-container img {
+#Team-Challenges .imgs .img-container img {
     width: 100%;
 }
 
-#Portfolio .imgs .img-container .caption {
+#Team-Challenges .imgs .img-container .caption {
     background-color: white;
     padding: 3vb;
     position: absolute;
     bottom: -10vh;
 }
 
-#Portfolio .imgs .img-container .caption h4 {
+#Team-Challenges .imgs .img-container .caption h4 {
     font-weight: normal;
     margin-bottom: 2vh;
 }
 
-#Portfolio .imgs .img-container .caption p {
+#Team-Challenges .imgs .img-container .caption p {
     color: var(--main-color);
 }
 
-#Portfolio .imgs .img-container:hover img {
+#Team-Challenges .imgs .img-container:hover img {
     transform: rotate(5deg) scale(1.08);
     transition: .3s;
 }
 
-#Portfolio .imgs .img-container:hover .caption {
+#Team-Challenges .imgs .img-container:hover .caption {
     width: 100%;
     bottom: 0;
     transition: .3s;
 }
 
-#Portfolio .more {
+#Team-Challenges .more {
     background-color: var(--main-color);
     color: #fff;
     padding: 2vb;
@@ -489,7 +402,7 @@ header nav .form i {
 
 #Video {
     position: relative;
-    
+
 }
 
 #Video video {
@@ -498,6 +411,7 @@ header nav .form i {
 
 #Video .text {
     color: #fff;
+    opacity: 0.8;
     background-color: var(--transparent-color);
     padding: 5vw;
     text-align: center;
@@ -506,6 +420,7 @@ header nav .form i {
     left: 0;
     right: 0;
     transform: translateY(-50%);
+
 }
 
 #Video .text h2 {
@@ -518,7 +433,7 @@ header nav .form i {
     margin: 2vb;
 }
 
-#Video .text  button {
+#Video .text button {
     color: #fff;
     background-color: #000;
     padding: 2vb;
@@ -527,90 +442,21 @@ header nav .form i {
     border: none;
 }
 
-#About {
-    padding: var(--padding-top) 0 0 0;
-}
-
-#About .container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-#About .container img {
-    text-align: center;
-    margin-top: -14vh;
-    position: relative;
-    bottom: -22vh;
-    max-width: 100%;
-}
-
-#State {
-    background-image: url("../Images/stats.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 15vb;
-}
-
-#State .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#State .state-container {
-    background-color: var(--transparent-color);
-    color: #fff;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5vb;
-    max-width: 100%;
-}
-
-@media (max-width: 767px) {
-    #State .state-container .box {
-        flex-basis: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    #State .state-container .box {
-        flex-basis: 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    #State .state-container .box {
-        flex-basis: 25%;
-    }
-}
-
-#State .state-container .box {
-    text-align: center;
-}
-
-#State .state-container i {
-    background-color: #000;
-    padding: 2vb;
-    border-radius: 50%;
-    margin: 2vb;
-}
-
-#State .state-container .number {
-    font-size: 42px;
-    font-weight: bold;
-    padding: 2vb;
-}
-
 #Our-Skills {
     padding: var(--padding-top) 0;
+}
+
+#Our-Skills .card {
+    min-width: 300px;
+    min-height: 200px;
+    background-color: #777;
+    border-radius: 20px;
+}
+
+#Our-Skills .cardsContainer {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
 }
 
 #Our-Skills .container {
@@ -621,18 +467,18 @@ header nav .form i {
     text-align: center;
 }
 
-#Our-Skills .container > div {
+#Our-Skills .container>div {
     flex-basis: 45%;
 }
 
-#Our-Skills .container > div > h2 {
+#Our-Skills .container>div>h2 {
     font-size: 20px;
-    font-weight: normal;    
+    font-weight: normal;
     padding-bottom: 5vh;
     text-transform: uppercase;
 }
 
-#Our-Skills .container > div > p {
+#Our-Skills .container>div>p {
     font-size: 16px;
     font-weight: normal;
     padding-bottom: 5vh;
@@ -648,9 +494,9 @@ header nav .form i {
 #Our-Skills .testimonials .person img {
     width: 100px;
     height: 100px;
-    margin: 2vb; 
+    margin: 2vb;
     border-radius: 50%;
-}  
+}
 
 #Our-Skills .testimonials .person .text {
     border-bottom: #ccc 1px solid;
@@ -727,303 +573,12 @@ header nav .form i {
 }
 
 @media (max-width: 768px) {
-    #Our-Skills .container > div {
+    #Our-Skills .container>div {
         flex-basis: 100%;
     }
 
     #Our-Skills .Skills {
         margin-top: 5vh;
-    }
-}
-
-#Quote {
-    background-image: url("../Images/quote.jpg");
-    background-size: cover;
-    position: relative;
-    font-size: 30px;
-    text-align: center;
-    padding: 14vb;
-    color: #fff;
-}
-
-#Quote .overlay {
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#Quote .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#Quote i , #Quote p {
-    display: inline;
-    line-height: 1.5;
-}
-
-#Quote .author {
-    font-size: 18px;
-    margin-top: 3vh;
-}
-
-#Pricing {
-    padding: var(--padding-top) 0;
-    text-align: center;
-}
-
-#Pricing .plans {
-    display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
-    justify-content: center;
-    align-items: center;
-    gap: 3vb;
-}
-
-#Pricing .plans .plan {
-    background-color: #fcfcfc;
-}
-
-#Pricing .plans .plan .head {
-    padding: 5vb;
-    border-top: var(--main-color) 1px solid;
-    border-bottom: var(--main-color) 1px solid;
-    position: relative;
-}
-
-#Pricing .plans .plan .head h2 {
-    text-transform: uppercase;
-    /* font-size: 30px; */
-    font-weight: normal;
-    padding-bottom: 2vh;
-}
-
-#Pricing .plans .plan .head span::before {
-    content: '$';
-    position: absolute;
-    font-size: 3vb;
-    font-weight: normal;
-    left: 5vw;
-}
-
-#Pricing .plans .plan .head span {
-    font-weight: bold;
-    font-size: 60px;
-}
-
-#Pricing .plans .plan .head span::after {
-    content: '/Mo';
-    position: absolute;
-    font-size: 20px;
-    font-weight: bold;
-    bottom: 44px;
-    right: 50px;
-}    
-
-#Pricing .plans .plan ul li {
-    position: relative;
-    list-style: none;
-    padding: 3vb;
-}
-
-#Pricing .plans .plan ul li:not(:last-child)::after {
-    content: '';
-    background-color: var(--main-color);
-    text-align: center;
-    width: 140px;
-    height: 1px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-}
-
-#Pricing .plans .plan .foot {
-    border-top: var(--main-color) 1px solid;
-    padding: 5vb;
-}
-
-#Pricing .plans .plan button {
-    background-color: #fff;
-    border: var(--main-color) 1px solid;
-    cursor: pointer;
-    transition: 0.5s;
-    padding: 3vb;
-
-}
-
-#Pricing .plans .plan button:hover {
-    background-color: var(--main-color);
-    color: #fff;
-}
-
-#Pricing h3 {
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center;
-    margin: 5vb;
-}
-
-#Pricing a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    background-color: var(--main-color);
-    margin: 2vb;
-    padding: 2vb;
-}
-
-#Subscribe {
-    background-image: url("../Images/subscribe.jpg");
-    background-size: cover;
-    position: relative;
-    padding: var(--padding-top) 0;
-}
-
-#Subscribe .container {
-    display: flex;
-}
-
-#Subscribe .container form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#Subscribe .container form input[type="email"] {
-    padding: 22.2px 22.2px 22.2px 50px; 
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    position: relative;
-    caret-color: var(--main-color);
-}
-
-#Subscribe .container form input[type="email"]:focus {
-    outline: none;
-}
-
-#Subscribe .container form i {
-    color: #fff;
-    position: absolute;
-    left: 20px;
-}
-
-#Subscribe .container form input::placeholder {
-    color: #fff;
-    font-size: 16px;
-    text-transform: capitalize;
-}
-
-#Subscribe .container form input[type="submit"] {
-    color: #fff;
-    background-color: var(--main-color);
-    border: 1px solid #fff;
-    padding: 3vb;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-#Subscribe .container p {
-    width: 50vw;
-    color: #fff;
-    margin-left: 2vw;
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 100%;
-}
-
-@media (max-width: 991px) { 
-    #Subscribe .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #Subscribe .container p {
-        margin-top: 3vh;
-    }
-}
-
-#Contact {
-    padding: var(--padding-top) 0;
-}
-
-#Contact .content {
-    display: flex;
-    justify-content: space-between;
-}
-
-#Contact .content form {
-    display: flex;
-    flex-basis: 70%;
-    flex-direction: column;
-    gap: 2vh;
-}
-
-#Contact form .main-input {
-    padding: 2vb;
-    border: 1px solid #ccc;
-    margin-bottom: 2vh;
-    outline: none;
-}
-
-#Contact form textarea {
-    height: 25vh;
-}
-
-#Contact form .main-input::placeholder {
-    text-transform: capitalize;
-}
-
-
-#Contact form input[type="submit"] {
-    color: #fff;
-    background-color: var(--main-color);
-    border: none;
-    padding: 3vb;
-    margin-left: auto;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-#Contact .info {
-    flex-basis: 25%;
-}
-
-#Contact .info h4 {
-    font-size: 20px;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 4vh;
-}
-
-#Contact .info span:nth-child(3) {
-    margin-bottom: 8vh;
-}
-
-#Contact .info span ,
-#Contact .info address {
-    display: block;
-    color: #777;
-    line-height: 1.8;
-}
-
-@media (max-width: 767px) {
-    #Contact .content {
-        flex-direction: column;
-    }
-
-    #Contact .info {
-        order: -1;
-        margin-bottom: 4vh;
-        text-align: center;
     }
 }
 
@@ -1071,5 +626,170 @@ footer .copyrights {
 }
 
 footer .copyrights span {
-    color: var(--main-color);
+    color: rgb(71 173 255);
+    font-weight: bolder;
+}
+
+/* footer .copyrights p {
+    color: rgb(71 173 255);
+    font-weight: bolder;
+} */
+
+.hidden {
+    display: none;
+}
+
+/*///////////////////////////////GAMES/////////////////////////////////////// */
+
+#Our-Games {
+    padding: var(--padding-top) 0 0 0;
+    background: #eee;
+    /* background-color: rgb(236, 198, 255); */
+    /* color: #fff; */
+}
+
+#Our-Games {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    height: 1020px;
+    /*overflow: hidden; */
+}
+
+#Our-Games .main-heading span {
+    font-weight: bold;
+}
+
+.containerG {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 550px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdd;
+}
+
+.containerG .slide .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1) {
+    left: calc(-35%);
+}
+
+.slide .item:nth-child(2) {
+    left: calc(-35% + 220px);
+}
+
+.slide .item:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(4) {
+    right: calc(-10%);
+    z-index: -1;
+}
+
+.slide .item:nth-child(5) {
+    right: calc(-10% - 220px);
+    z-index: -1;
+}
+
+/* here n = 0, 1, 2, 3, 4,.... */
+.slide .item:nth-child(n + 6) {
+    right: calc(-10% - 440px);
+}
+
+.item .contentG {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 200px;
+    /* //300 */
+    text-align: left;
+    color: #000;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+.slide .item:nth-child(3) .contentG {
+    display: block;
+}
+
+.contentG .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.contentG .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.contentG button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.buttonG {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.buttonG button {
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.buttonG button:hover {
+    background: #ababab;
+    color: #fff;
 }

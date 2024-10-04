@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/Kasper.css" />
     <link rel="stylesheet" href="CSS/normalizing.css" />
     <link rel="stylesheet" href="CSS/all.min.css" />
@@ -18,7 +21,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Images/logo.png" alt="logo" />
+                <img src="Images/Logos/L4.png" width="200px" alt="logo" />
             </div>
             <nav>
                 <div class="logo">
@@ -26,11 +29,10 @@
                 </div>
                 <ul>
                     <li><a href="#Home" class="active">Home</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Pricing">Pricing</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#Our-Games">Games</a></li>
+                    <li><a href="#Team-Challenges">Solo Challenges</a></li>
+                    <li><a href="#Our-Skills">Team Challenges</a></li>
+                    <li><a href="#footer">About</a></li>
                 </ul>
                 <div class="form">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -39,507 +41,136 @@
         </div>
     </header>
     <div id="Home">
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
         <div class="text">
             <div class="content">
+                
                 <h1>
-                    Hallo world! <br />
-                    we are kasper we make art
+                    Welcome to<br />
+                    AstroPhoenix Space Agency
                 </h1>
                 <p>
-                    Lorem ipsum dolor sit amet. sit amet consectetur adipisicing elit.
-                    Adipisci tenetur omnis nisi, debitis iusto deserunt. Neque, culpa.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                    totam!
+                    Explore fun, physical games designed for astronauts and space enthusiasts.
+                    Our games promote teamwork, fitness, and mental sharpness in confined or space environments.
+                    Stay active and engaged—let the adventure begin!
                 </p>
             </div>
         </div>
         <div onclick="switchingDownPage()" class="fa-solid fa-angle-left"></div>
         <div onclick="switchingUpPage()" class="fa-solid fa-angle-right"></div>
         <ul class="bullets">
-            <li class="active" style="left: -80px"></li>
-            <li style="left: -40px"></li>
-            <li style="left: 0"></li>
-            <li style="left: 40px"></li>
-            <li style="left: 80px"></li>
+            <li onclick="ImageClick(0)" class="active" style="left: -80px"></li>
+            <li onclick="ImageClick(1)" style="left: -40px"></li>
+            <li onclick="ImageClick(2)" style="left: 0"></li>
+            <li onclick="ImageClick(3)" style="left: 40px"></li>
+            <li onclick="ImageClick(4 )" style="left: 80px"></li>
         </ul>
     </div>
-    <div id="Services">
-        <div class="container">
-            <div class="main-heading">
-                <h2>services</h2>
-                <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                    Mauris blandit aliquet elit, eget tincidunt.
-                </p>
+
+    <!--/////////////////// games ////////////////////-->
+    <div id="Our-Games">
+        <div class="main-heading">
+            <h2>our games</h2>
+            <p>
+                Discover a collection of fun, physical games designed to boost teamwork,
+                fitness, and mental agility in confined or space environments.
+            </p>
+            <!-- <span>Click on <a href="games.html">See more</a> to explore how to play!</span> -->
+        </div>
+        <div class="containerG">
+            <div class="slide">
+                <div class="item" style="background-image: url(Images/blue.png);">
+                    <div class="contentG">
+                        <div class="name">Switzerland</div>
+                        <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/bink.jpeg);">
+                    <div class="contentG">
+                        <div class="name">Puzzle Space</div>
+                        <div class="des">Discover the diffrent Puzzle through the spiaceship</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/purple.jpeg);">
+                    <div class="contentG">
+                        <div class="name">Fit Each </div>
+                        <div class="des">Space Themed Memory Card playing </div>
+                        <button><a href="./memory-card-game-main/index.html">Play Now</a></button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/wp3549816.jpg);">
+                    <div class="contentG">
+                        <div class="name">Memory Ball Challenge</div>
+                        <div class="des">Astronauts challenges their memory </div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/pink-solid-color-light-wallpaper-thumb.jpg);">
+                    <div class="contentG">
+                        <div class="name">Netherland</div>
+                        <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(Images/blue-background.jpg);">
+                    <div class="contentG">
+                        <div class="name">Ireland</div>
+                        <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
             </div>
-            <div class="services-container">
-                <div class="part">
-                    <i class="fa-solid fa-desktop"></i>
-                    <div class="part-paragraph">
-                        <h3>Creative Design</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                            repellendus, perspiciatis nisi beatae quod quas voluptatibus
-                            voluptatum.
-                        </p>
-                    </div>
-                </div>
-                <div class="part">
-                    <i class="fas fa-camera"></i>
-                    <div class="part-paragraph">
-                        <h3>Creative Design</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                            repellendus, perspiciatis nisi beatae quod quas voluptatibus
-                            voluptatum.
-                        </p>
-                    </div>
-                </div>
-                <div class="part">
-                    <i class="fa-solid fa-otter"></i>
-                    <div class="part-paragraph">
-                        <h3>Creative Design</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                            repellendus, perspiciatis nisi beatae quod quas voluptatibus
-                            voluptatum.
-                        </p>
-                    </div>
-                </div>
-                <div class="part">
-                    <i class="fa-solid fa-truck-monster"></i>
-                    <div class="part-paragraph">
-                        <h3>Creative Design</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                            repellendus, perspiciatis nisi beatae quod quas voluptatibus
-                            voluptatum.
-                        </p>
-                    </div>
-                </div>
+            <div class="buttonG">
+                <button title="arrow" class="prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button title="arrow" class="next"><i class="fa-solid fa-arrow-right-long"></i></button>
             </div>
         </div>
     </div>
-    <div id="Design">
-        <div class="img">
-            <img src="Images/mobile.png" alt="img" />
-        </div>
-        <div class="text">
-            <h2>our designs comes with..</h2>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-desktop"></i><span>Responsive Design</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-desktop"></i><span>Modern And Clean Design</span>
-                </li>
-                <li><i class="fa-solid fa-desktop"></i><span>Clean Code</span></li>
-                <li>
-                    <i class="fa-solid fa-desktop"></i><span>Browser Friendly</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="Portfolio">
+    <div id="Team-Challenges">
         <div class="container">
             <div class="main-heading">
-                <h2>portfolio</h2>
+                <h2>Solo Challenges</h2>
                 <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                    Mauris blandit aliquet elit, eget tincidunt.
+                    Discover engaging challenges designed to challenge your mind and body.
                 </p>
             </div>
-            <ul class="shuffle-list">
+            <!-- <ul class="shuffle-list">
                 <li>All</li>
                 <li class="active">App</li>
                 <li>Photo</li>
                 <li>Web</li>
                 <li>Print</li>
-            </ul>
+            </ul> -->
         </div>
-        <div class="imgs">
-            <div class="img-container">
-                <img src="Images/shuffle-01.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-02.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-03.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-04.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-05.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-06.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-07.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container">
-                <img src="Images/shuffle-08.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-pixabay-147411.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-samandgos-709552.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-pixabay-206359.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-pixabay-462162.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-pixabay-355465.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-pripicart-620337.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-souvenirpixels-417074.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-ifreestock-585752.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-baskincreativeco-1766838.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-            <div class="img-container hidden">
-                <img src="Images/pexels-therato-1933239.jpg" alt="img" />
-                <div class="caption">
-                    <h4>Awesome Image</h4>
-                    <p>Photography</p>
-                </div>
-            </div>
-        </div>
+        <div class="imgs" id="image-gallery"></div>
         <div class="more" onclick="showMore()">more</div>
     </div>
     <div id="Video">
-        <video src="Images/awesome-video.mp4" autoplay muted loop></video>
+        <video src="Images/MyPhotos/9440173-hd_1920_1080_24fps.mp4" autoplay muted loop></video>
         <div class="text">
             <h2>Super Awesome Video Here</h2>
             <p>Its All You Need</p>
-            <button>see more</button>
-        </div>
-    </div>
-    <div id="About">
-        <div class="container">
-            <div class="main-heading">
-                <h2>About us</h2>
-                <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                    Mauris blandit aliquet elit, eget tincidunt.
-                </p>
-            </div>
-            <img src="Images/about.png" alt="img" />
-        </div>
-    </div>
-    <div id="State">
-        <div class="overlay"></div>
-        <div class="state-container">
-            <div class="box">
-                <i class="fas fa-mug-hot"></i>
-                <div class="number">1.236</div>
-                <p>Coffe Drinks</p>
-            </div>
-            <div class="box">
-                <i class="far fa-folder"></i>
-                <div class="number">256</div>
-                <p>Completed Projects</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <div class="number">1,743</div>
-                <p>Mails Sent</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-trophy"></i>
-                <div class="number">17</div>
-                <p>Awards Received</p>
-            </div>
+            <button>Play Now</button>
         </div>
     </div>
     <div id="Our-Skills">
-        <div class="container">
-            <div class="testimonials">
-                <h2>testimonials</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                    dolorum iure vel iusto dignissimos corrupti temporibus!
-                </p>
-                <div class="person">
-                    <img src="Images/skills-01.jpg" alt="img" />
-                    <div class="text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Tempore, ad aliquid! Quo quis consequatur molestiae dolore?
-                            Perferendis placeat labore numquam!
-                        </p>
-                        <p class="name">John Doe, CEO</p>
-                    </div>
-                </div>
-                <div class="person">
-                    <img src="Images/skills-02.jpg" alt="img" />
-                    <div class="text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Tempore, ad aliquid! Quo quis consequatur molestiae dolore?
-                            Perferendis placeat labore numquam!
-                        </p>
-                        <p class="name">John Doe, CEO</p>
-                    </div>
-                </div>
-                <ul class="bullets">
-                    <li class="active" style="left: -40px"></li>
-                    <li style="left: 0"></li>
-                    <li style="left: 40px"></li>
-                </ul>
-            </div>
-            <div class="Skills">
-                <h2>skills</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                    dolorum iure vel iusto dignissimos corrupti temporibus!
-                </p>
-                <div class="prog-holder">
-                    <h4>adobe</h4>
-                    <div class="prog">
-                        <div class="prog-bar" style="width: 90%" data-progress="90%"></div>
-                    </div>
-                </div>
-                <div class="prog-holder">
-                    <h4>html & css</h4>
-                    <div class="prog">
-                        <div class="prog-bar" style="width: 85%" data-progress="85%"></div>
-                    </div>
-                </div>
-                <div class="prog-holder">
-                    <h4>javascipt</h4>
-                    <div class="prog">
-                        <div class="prog-bar" style="width: 80%" data-progress="80%"></div>
-                    </div>
-                </div>
-                <div class="prog-holder">
-                    <h4>php</h4>
-                    <div class="prog">
-                        <div class="prog-bar" style="width: 90%" data-progress="90%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="Quote">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="text">
-                <i class="fa-solid fa-quote-left"></i>
-                <p>
-                    Two things are infinite: the universe and human stupidity; and I'm
-                    not sure about the universe
-                </p>
-                <i class="fa-solid fa-quote-right"></i>
-            </div>
-            <div class="author">Albert Einstein</div>
-        </div>
-    </div>
-    <div id="Pricing">
-        <div class="container">
-            <div class="main-heading">
-                <h2>Pricing</h2>
-                <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                    Mauris blandit aliquet elit, eget tincidunt.
-                </p>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <div class="head">
-                        <h2>basic</h2>
-                        <span>19</span>
-                    </div>
-                    <ul>
-                        <li>Feature No 1</li>
-                        <li>Extra Feature</li>
-                        <li>Extra Feature No 2</li>
-                        <li>Feature</li>
-                    </ul>
-                    <div class="foot">
-                        <button>Buy Now</button>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="head">
-                        <h2>premium</h2>
-                        <span>29</span>
-                    </div>
-                    <ul>
-                        <li>Feature No 1</li>
-                        <li>Extra Feature</li>
-                        <li>Extra Feature No 2</li>
-                        <li>Feature</li>
-                    </ul>
-                    <div class="foot">
-                        <button>Buy Now</button>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="head">
-                        <h2>pro</h2>
-                        <span>39</span>
-                    </div>
-                    <ul>
-                        <li>Feature No 1</li>
-                        <li>Extra Feature</li>
-                        <li>Extra Feature No 2</li>
-                        <li>Feature</li>
-                    </ul>
-                    <div class="foot">
-                        <button>Buy Now</button>
-                    </div>
-                </div>
-                <div class="plan">
-                    <div class="head">
-                        <h2>platinum</h2>
-                        <span>49</span>
-                    </div>
-                    <ul>
-                        <li>Feature No 1</li>
-                        <li>Extra Feature</li>
-                        <li>Extra Feature No 2</li>
-                        <li>Feature</li>
-                    </ul>
-                    <div class="foot">
-                        <button>Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <h3>contact us if you have special request</h3>
-            <a href="https://www.facebook.com/profile.php?id=100083304720753">Contact Us</a>
-        </div>
-    </div>
-    <div id="Subscribe">
-        <div class="overlay"></div>
-        <div class="container">
-            <form action="#">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="your email" />
-                <input type="submit" value="Subscribe" />
-            </form>
+        <div class="main-heading">
+            <h2>Team Challenges</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quis
-                perferendis accusamus rerum sunt ipsam quisquam.
+                Discover engaging challenges designed to challenge your mind and body.
             </p>
         </div>
-    </div>
-    <div id="Contact">
-        <div class="container">
-            <div class="main-heading">
-                <h2>Contact us</h2>
-                <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                    Mauris blandit aliquet elit, eget tincidunt.
-                </p>
-            </div>
-            <div class="content">
-                <form action="#">
-                    <input type="text" class="main-input" placeholder="your name" />
-                    <input type="email" class="main-input" placeholder="your email" />
-                    <textarea name="message" class="main-input" placeholder="your message"></textarea>
-                    <input type="submit" value="send message" />
-                </form>
-                <div class="info">
-                    <h4>get in touch</h4>
-                    <span>+00 123.456.789</span>
-                    <span>+00 123.456.789</span>
-                    <h4>where we are</h4>
-                    <address>
-                        Awesome Address 17 <br />
-                        New York, NYC <br />
-                        123-4567-890 <br />
-                        USA
-                    </address>
-                </div>
-            </div>
+        <div class="cardsContainer">
+            <div class="card left"></div>
+            <div class="card right"></div>
         </div>
     </div>
-    <footer>
+    <footer id="footer" >
         <div class="overlay"></div>
         <div class="container">
-            <img src="Images/logo.png" alt="img" />
+            <img src="Images/Logos/L4.png" width="200px" alt="img" />
             <p class="we-are">we are social</p>
             <a href="http://www.facebook.com/profile.php?id=100083304720753">
                 <i class="fab fa-facebook"></i>
@@ -554,9 +185,18 @@
                 <i class="fab fa-twitter"></i>
             </a>
             <p class="copyrights">
-                &copy; 2024 <span>Kasper</span> All Right Reserved
+                &copy; 2024 <span>Astro Phienox</span> All Right Reserved
                 <br />
-                Created and Developed in 24/8/2024 by <span>Youssef Ragheb</span>
+                Created and Developed in 4/10/2024 by <span>Our team:</span>
+                <br />
+            <p style="color: #fff;">
+                <span>Youssef Ragheb</span> |
+                <span>Youssef Hesham</span> |
+                <span>Menna Mohamed</span>|
+                <span>Mariam Gharib</span> |
+                <span>Mohamed Medhat</span> |
+                <span>Mohamed Mostafa</span>
+            </p>
             </p>
         </div>
     </footer>
